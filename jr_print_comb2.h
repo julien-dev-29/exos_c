@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   jr_print_comb2.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -9,10 +9,9 @@
 /*   Updated: 2025/12/01 10:00:00 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "jr_print_combn.h"
+#ifndef JR_PRINT_COMB2_H
+# define JR_PRINT_COMB2_H
 
-int	main(void)
-{
-	jr_print_combn(3);
-	return (0);
-}
+void	jr_print_comb2(void);
+
+#endif
