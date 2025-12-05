@@ -9,13 +9,9 @@
 /*   Updated: 2025/12/01 10:00:00 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
-#include "jr_putstr.h"
-#include "jr_strrev.h"
 
-int	main(void)
-{
-    char str[] = "Hello!";
-    jr_putstr(jr_strrev(str));
-	return (0);
-}
+#ifndef JR_JR_H
+# define JR_JR_H
+
+void	jr_jr(int *nbr);
+#endif

@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   jr_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/01 10:00:00 by julien            #+#    #+#             */
+/*   Created: 2025/12/04 11:17:00 by julien            #+#    #+#             */
 /*   Updated: 2025/12/01 10:00:00 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
-#include "jr_putstr.h"
-#include "jr_strrev.h"
 
-int	main(void)
+#include "jr_swap.h"
+
+void	jr_swap(int *a, int *b)
 {
-    char str[] = "Hello!";
-    jr_putstr(jr_strrev(str));
-	return (0);
+	int	temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }

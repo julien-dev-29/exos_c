@@ -5,17 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/01 10:00:00 by julien            #+#    #+#             */
+/*   Created: 2025/12/04 11:17:00 by julien            #+#    #+#             */
 /*   Updated: 2025/12/01 10:00:00 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
-#include "jr_putstr.h"
-#include "jr_strrev.h"
+#ifndef JR_ULTIMATE_JR_H
+# define JR_ULTIMATE_JR_H
 
-int	main(void)
-{
-    char str[] = "Hello!";
-    jr_putstr(jr_strrev(str));
-	return (0);
-}
+void	jr_ultimate_jr(int *********nbr);
+
+#endif
