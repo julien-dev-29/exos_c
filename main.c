@@ -10,12 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
-#include "jr_putstr.h"
-#include "jr_strrev.h"
+#include "jr_putnbr.h"
+#include "jr_find_next_prime.h"
 
 int	main(void)
 {
-    char str[] = "Hello!";
-    jr_putstr(jr_strrev(str));
+	jr_putnbr(jr_find_next_prime(10));
 	return (0);
 }

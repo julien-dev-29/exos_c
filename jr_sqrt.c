@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                              //  __________________ \\     */
 /*                                             //   \##### :: #######/ //     */
-/*   jr_strrev.h                               \\    \##__|::|##__##/ //      */
+/*   jr_sqrt.h                               \\    \##__|::|##__##/ //      */
 /*                                                ()      |++|  ______        */
-/*   By: julien <julienrolland@gmx.fr>         ()     /|  |++|        \       */
+/*   By: julien <julienrollan@gmx.fr>          ()     /|  |++|        \       */
 /*                                                 ()/#|__|##   /      |      */
 /*   Created: 2025/12/04 17:23:00 by julien         /_____|    /| |   /       */
 /*   Updated: 2025/12/01 10:00:00 by julien        /_________ />++| \-\       */
 /*                                                /::::::::: /<|_|  \__\      */
 /* ************************************************************************** */
-#include "jr_strrev.h"
+#include "jr_sqrt.h"
 
-char	*jr_strrev(char *str)
+int	jr_sqrt(int nb)
 {
-	int		start;
-	int		end;
-	char	temp;
+	double	i;
 
-	if (!str)
+	if (nb <= 0)
 		return (0);
-	start = 0;
-	end = 0;
-	while (str[end])
-		end++;
-	end--;
-	while (start < end)
+	i = 1;
+	while (i * i <= nb)
 	{
-		temp = str[start];
-		str[start] = str[end];
-		str[end] = temp;
-		start++;
-		end--;
+		if (i * i == nb)
+			return (i);
+		i++;
 	}
-	return (str);
+	return (0);
 }

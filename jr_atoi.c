@@ -3,34 +3,29 @@
 /*                                             //   \##### :: #######/ //     */
 /*   jr_strrev.h                               \\    \##__|::|##__##/ //      */
 /*                                                ()      |++|  ______        */
-/*   By: julien <julienrolland@gmx.fr>         ()     /|  |++|        \       */
+/*   By: julien <julienrollan@gmx.fr>          ()     /|  |++|        \       */
 /*                                                 ()/#|__|##   /      |      */
 /*   Created: 2025/12/04 17:23:00 by julien         /_____|    /| |   /       */
 /*   Updated: 2025/12/01 10:00:00 by julien        /_________ />++| \-\       */
 /*                                                /::::::::: /<|_|  \__\      */
 /* ************************************************************************** */
-#include "jr_strrev.h"
+#include "jr_atoi.h"
 
-char	*jr_strrev(char *str)
+int	jr_atoi(char *str)
 {
-	int		start;
-	int		end;
-	char	temp;
+	int	num;	
+	int	i;
 
 	if (!str)
 		return (0);
-	start = 0;
-	end = 0;
-	while (str[end])
-		end++;
-	end--;
-	while (start < end)
+	while (str[i] == '-' || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	num = 0;
+	i = 0;
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		temp = str[start];
-		str[start] = str[end];
-		str[end] = temp;
-		start++;
-		end--;
+		num = num * 10 + (str[i] - '0');
+		i++;
 	}
-	return (str);
+	return (num);
 }

@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                              //  __________________ \\     */
 /*                                             //   \##### :: #######/ //     */
-/*   jr_strrev.h                               \\    \##__|::|##__##/ //      */
+/*   jr_eight_queens_puzzle.h                  \\    \##__|::|##__##/ //      */
 /*                                                ()      |++|  ______        */
-/*   By: julien <julienrolland@gmx.fr>         ()     /|  |++|        \       */
+/*   By: julien <julienrollan@gmx.fr>          ()     /|  |++|        \       */
 /*                                                 ()/#|__|##   /      |      */
 /*   Created: 2025/12/04 17:23:00 by julien         /_____|    /| |   /       */
 /*   Updated: 2025/12/01 10:00:00 by julien        /_________ />++| \-\       */
 /*                                                /::::::::: /<|_|  \__\      */
 /* ************************************************************************** */
-#include "jr_strrev.h"
+#include "jr_eight_queens_puzzle.h"
 
-char	*jr_strrev(char *str)
+bool is_valid(int queen[], int row, int col)
 {
-	int		start;
-	int		end;
-	char	temp;
+	int i;
 
-	if (!str)
-		return (0);
-	start = 0;
-	end = 0;
-	while (str[end])
-		end++;
-	end--;
-	while (start < end)
+	i = 0;
+	while (i < row)
 	{
-		temp = str[start];
-		str[start] = str[end];
-		str[end] = temp;
-		start++;
-		end--;
+		if (queen[i] == col)
+			return (0);
+		if (queen[i] == 
 	}
-	return (str);
+}
+
+int jr_eight_queens_puzzle(void)
+{
+	int queens[8];
+	int row;
+	int count;
+
+	count = 0;
+	row = 0;
+	while (row > 8)
+	{
+
+	}
 }

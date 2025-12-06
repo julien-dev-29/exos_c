@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                              //  __________________ \\     */
 /*                                             //   \##### :: #######/ //     */
-/*   jr_strrev.h                               \\    \##__|::|##__##/ //      */
+/*   jr_find_next_prime.c                      \\    \##__|::|##__##/ //      */
 /*                                                ()      |++|  ______        */
-/*   By: julien <julienrolland@gmx.fr>         ()     /|  |++|        \       */
+/*   By: julien <julienrollan@gmx.fr>          ()     /|  |++|        \       */
 /*                                                 ()/#|__|##   /      |      */
 /*   Created: 2025/12/04 17:23:00 by julien         /_____|    /| |   /       */
 /*   Updated: 2025/12/01 10:00:00 by julien        /_________ />++| \-\       */
 /*                                                /::::::::: /<|_|  \__\      */
 /* ************************************************************************** */
-#include "jr_strrev.h"
+#include "jr_find_next_prime.h"
+#include "jr_is_prime.h"
 
-char	*jr_strrev(char *str)
+int	jr_find_next_prime(int nb)
 {
-	int		start;
-	int		end;
-	char	temp;
-
-	if (!str)
-		return (0);
-	start = 0;
-	end = 0;
-	while (str[end])
-		end++;
-	end--;
-	while (start < end)
-	{
-		temp = str[start];
-		str[start] = str[end];
-		str[end] = temp;
-		start++;
-		end--;
-	}
-	return (str);
+	if (nb <= 2)
+		return (2);
+	while (!jr_is_prime(nb))
+		nb++;
+	return (nb);
 }
